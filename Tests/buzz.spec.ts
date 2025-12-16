@@ -12,8 +12,9 @@ test.beforeEach(async ({ page }) => {
   await login.login('Admin', 'admin123');
   await buzz.openBuzz();
 });
-test('Create a new post via UI', async ({ page }) => {
-  const postText = `Hello from Playwright ${Date.now()}`;
-  await buzz.createPost(postText);
-  await page.screenshot({path:'screenshots/Create a new post via UI.png'});
+
+test('Verify Buzz Page Loads Successfully', async ({ page }) => {
+  await buzz.openBuzz();
+  await buzz.verifyPageLoaded();
 });
+

@@ -1,8 +1,9 @@
 import { Page, expect } from '@playwright/test';
 
 export class BuzzPage {
+  readonly buzzHeader = '.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module';
   constructor(private page: Page) {}
-
+  
   async openBuzz() {
     await this.page.click('a[href="/web/index.php/buzz/viewBuzz"]');
     await expect(this.page).toHaveURL(/buzz\/viewBuzz/);
@@ -24,5 +25,8 @@ export class BuzzPage {
 
     const firstPost = this.page.locator('.orangehrm-buzz-post').first();
     await expect(firstPost).toBeVisible({ timeout: 20000 });
+  }
+  async verifyPageLoaded() {
+    await expect(this.page.locator(this.buzzHeader)).toBeVisible();
   }
 }
