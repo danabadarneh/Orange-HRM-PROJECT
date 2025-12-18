@@ -60,8 +60,5 @@ test('Verify Upcoming Anniversaries Section Title', async ({ page }) => {
   await expect(buzz.anniversaryTitle).toBeVisible({ timeout: 10000 });
   await expect(buzz.anniversaryTitle).toHaveText(/Upcoming Anniversaries/i);
   await page.screenshot({path: 'screenshots/upcoming-anniversaries-title.png',fullPage: true});
-});
-
-  
-  
+});  
 });
