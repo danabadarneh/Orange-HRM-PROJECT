@@ -26,10 +26,10 @@ export class BuzzPage {
   readonly likeIcon: Locator;
   readonly commentIcon: Locator;
   readonly shareIcon: Locator;
-
+  readonly anniversaryTitle:Locator;
   constructor(page: Page) {
     this.page = page;
-
+    this.anniversaryTitle = page.locator('.orangehrm-buzz-anniversary-title');
     // Header
     this.buzzHeader = page.locator('.oxd-topbar-header-breadcrumb-module');
 
