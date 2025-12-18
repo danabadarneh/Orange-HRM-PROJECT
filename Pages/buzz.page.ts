@@ -2,27 +2,18 @@ import { Page, Locator, expect } from '@playwright/test';
 
 export class BuzzPage {
   readonly page: Page;
-
-  // Header
   readonly buzzHeader: Locator;
-
-  // Post actions
   readonly postButton: Locator;
   readonly sharePhotosButton: Locator;
   readonly shareVideoButton: Locator;
-
-  // Tabs
   readonly recentTab: Locator;
   readonly likedTab: Locator;
   readonly commentedTab: Locator;
-
-  // Post Card
   readonly postCard: Locator;
   readonly postAuthor: Locator;
   readonly timepost: Locator;
   readonly postContent: Locator;
   readonly postTextarea:Locator;
-  // Icons
   readonly likeIcon: Locator;
   readonly commentIcon: Locator;
   readonly shareIcon: Locator;
@@ -62,7 +53,6 @@ export class BuzzPage {
   async createPost(text: string) {
     await this.postTextarea.fill(text);
     await this.postButton.click();
-  
     await expect(this.page.locator('.orangehrm-buzz-post-body-text', {hasText: text,}).first()).toBeVisible({ timeout: 30000 });
   }
 }
