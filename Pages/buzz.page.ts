@@ -32,7 +32,6 @@ export class BuzzPage {
     this.anniversaryTitle = page.locator('.orangehrm-buzz-anniversary-title');
   
     this.buzzHeader = page.locator('.oxd-topbar-header-breadcrumb-module');
-
     this.postTextarea = page.locator('textarea');
     this.postButton = page.locator('button.oxd-button--main:has-text("Post")');
 
