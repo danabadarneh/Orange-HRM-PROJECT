@@ -30,29 +30,23 @@ export class BuzzPage {
   constructor(page: Page) {
     this.page = page;
     this.anniversaryTitle = page.locator('.orangehrm-buzz-anniversary-title');
-    // Header
+  
     this.buzzHeader = page.locator('.oxd-topbar-header-breadcrumb-module');
 
-    // Create Post
     this.postTextarea = page.locator('textarea');
     this.postButton = page.locator('button.oxd-button--main:has-text("Post")');
 
-    // Share buttons
     this.sharePhotosButton = page.locator('button:has-text("Share Photos")');
     this.shareVideoButton = page.locator('button:has-text("Share Video")');
 
-    // Tabs
     this.recentTab = page.locator('.orangehrm-post-filters button').nth(0);
     this.likedTab = page.locator('.orangehrm-post-filters button').nth(1);
     this.commentedTab = page.locator('.orangehrm-post-filters button').nth(2);
 
-    // Post card (first / latest post)
     this.postCard = page.locator('.orangehrm-buzz-post').first();
     this.postAuthor = this.postCard.locator('.orangehrm-buzz-post-header-text');
-    //this.postTime = this.postCard.locator('.orangehrm-buzz-post-time');
     this.postContent = this.postCard.locator('.orangehrm-buzz-post-body-text');
 
-    // Icons
     this.likeIcon = this.postCard.locator('i.bi-heart-fill');
     this.commentIcon = this.postCard.locator('i.bi-chat-dots-fill');
     this.shareIcon = this.postCard.locator('i.bi-share-fill');
