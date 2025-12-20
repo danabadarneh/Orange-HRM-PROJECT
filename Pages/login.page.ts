@@ -89,6 +89,4 @@ export class LoginPage {
     await newPage.waitForLoadState();
     expect(newPage.url()).toContain('youtube.com');
   }
-
-  
 }
