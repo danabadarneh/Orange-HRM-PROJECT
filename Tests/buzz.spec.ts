@@ -49,7 +49,6 @@ test.describe('Orange HRM – Buzz Page', () => {
 
   test('Verify new post text appears on Buzz page', async ({ page }) => {
   const postText = 'Automation Post Test';
-
   await buzz.createPost(postText);
   await expect(page.locator('.orangehrm-buzz-post-body-text', { hasText: postText,}).first()).toBeVisible({ timeout: 30000 });
   await page.screenshot({path: 'screenshots/verify-post-text.png',fullPage: true});
