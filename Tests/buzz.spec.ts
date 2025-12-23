@@ -61,6 +61,5 @@ test('Verify Upcoming Anniversaries Section Title', async ({ page }) => {
   await page.screenshot({path: 'screenshots/upcoming-anniversaries-title.png',fullPage: true});
 });
 
-  
-  
+   
 });
