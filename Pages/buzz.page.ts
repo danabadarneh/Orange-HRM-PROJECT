@@ -40,7 +40,6 @@ export class BuzzPage {
     this.commentIcon = this.postCard.locator('i.bi-chat-dots-fill');
     this.shareIcon = this.postCard.locator('i.bi-share-fill');
   }
-
   async openBuzz() {
     await this.page.click('a[href="/web/index.php/buzz/viewBuzz"]');
     await expect(this.page).toHaveURL(/buzz\/viewBuzz/);
