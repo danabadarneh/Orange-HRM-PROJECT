@@ -16,7 +16,6 @@ test.describe('Orange HRM Login Tests', () => {
     await expect(page.locator('h6')).toHaveText('Dashboard');
     await page.screenshot({ path: 'screenshots/valid-login.png', fullPage: true });
   });
-
   test('Invalid username', async ({ page }) => {
     await loginPage.login('WrongUser', 'admin123');
     await expect(loginPage.getErrorMessage()).toHaveText('Invalid credentials');
