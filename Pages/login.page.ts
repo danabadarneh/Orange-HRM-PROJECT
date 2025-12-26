@@ -34,7 +34,7 @@ export class LoginPage {
     this.title=page.locator('.oxd-text.oxd-text--h5.orangehrm-login-title');
 
   }
-//class="oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message"
+//="oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message"
   async goto() {
     await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   }
