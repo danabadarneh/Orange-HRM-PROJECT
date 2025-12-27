@@ -51,7 +51,6 @@ export class BuzzPage {
   async createPost(text: string) {
     await this.postTextarea.fill(text);
     await this.postButton.click();
-  
     await expect(this.page.locator('.orangehrm-buzz-post-body-text', {hasText: text,}).first()).toBeVisible({ timeout: 30000 });
   }
 }
