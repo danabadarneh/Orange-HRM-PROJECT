@@ -44,7 +44,7 @@ export class BuzzPage {
     await this.page.click('a[href="/web/index.php/buzz/viewBuzz"]');
     await expect(this.page).toHaveURL(/buzz\/viewBuzz/);
   }
-
+ 
   async verifyPageLoaded() {
     await expect(this.buzzHeader).toBeVisible();
   }
