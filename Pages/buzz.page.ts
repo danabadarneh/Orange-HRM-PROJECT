@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-
+ 
 export class BuzzPage {
   readonly page: Page;
   readonly buzzHeader: Locator;
