@@ -26,8 +26,7 @@ export class BuzzPage {
     this.postButton = page.locator('button.oxd-button--main:has-text("Post")');
 
     this.sharePhotosButton = page.locator('button:has-text("Share Photos")');
-    this.shareVideoButton = page.locator('button:has-text("Share Video")');
-
+    this.shareVideoButton = page.locator('button:has-text("Share Video")'); 
     this.recentTab = page.locator('.orangehrm-post-filters button').nth(0);
     this.likedTab = page.locator('.orangehrm-post-filters button').nth(1);
     this.commentedTab = page.locator('.orangehrm-post-filters button').nth(2);
